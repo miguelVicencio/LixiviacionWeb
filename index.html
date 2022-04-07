@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Lixiviación</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=854 height=480 class="Pagina"></canvas>
+    <script src="Build/Lixiviacion.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Lixiviacion.data",
+        frameworkUrl: "Build/Lixiviacion.framework.js",
+        codeUrl: "Build/Lixiviacion.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "UCN",
+        productName: "Lixiviación",
+        productVersion: "1.0b",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
